@@ -1,0 +1,162 @@
+_dataset:
+  class: BNCI2014_008
+  code: BNCI2014-008
+  doi: 10.3389/fnhum.2013.00732
+  interval:
+  - 0
+  - 1.0
+  n_subjects: 8
+  paradigm: p300
+acquisition:
+  channel_types:
+    eeg: 8
+  electrode_material: Ag/AgCl
+  electrode_type: g.Ladybird
+  filters: 0.1-10 Hz bandpass, 50 Hz notch
+  ground: left mastoid
+  hardware: g.MOBILAB
+  line_freq: 50.0
+  montage: 10-10
+  n_channels: 8
+  reference: right earlobe
+  sampling_rate: 256.0
+  sensor_type: active electrodes
+  sensors:
+  - Fz
+  - Cz
+  - Pz
+  - Oz
+  - P3
+  - P4
+  - PO7
+  - PO8
+  software: BCI2000
+bci_application:
+  applications:
+  - communication
+  environment: laboratory
+  online_feedback: true
+cross_validation:
+  cv_folds: 7
+  cv_method: 7-fold
+  evaluation_type:
+  - within_subject
+data_processed: true
+data_structure:
+  n_blocks: 7
+  n_trials: 35
+  trials_context: per subject (7 words, 5 characters each)
+documentation:
+  contact_info:
+  - a.riccio@hsantalucia.it
+  country: Italy
+  doi: 10.3389/fnhum.2013.00732
+  ethics_approval:
+  - Fondazione Santa Lucia ethic committee
+  funding:
+  - Italian Agency for Research on ALS-ARiSLA project 'Brindisys'
+  - FARI project C26I12AJZZ at the Sapienza University of Rome
+  institution: Fondazione Santa Lucia
+  institution_address: Via Ardeatina, 306, 00179 Rome, Italy
+  institution_department: Neuroelectrical Imaging and BCI Laboratory
+  investigators:
+  - Angela Riccio
+  - Luca Simione
+  - Francesca Schettini
+  - Alessia Pizzimenti
+  - Maurizio Inghilleri
+  - Marta Olivetti Belardinelli
+  - Donatella Mattia
+  - Febo Cincotti
+  keywords:
+  - brain computer interface
+  - amyotrophic lateral sclerosis
+  - P300
+  - attention
+  - working memory
+  license: CC-BY-NC-ND-4.0
+  publication_year: 2013
+  repository: BNCI Horizon
+  senior_author: Febo Cincotti
+experiment:
+  class_labels:
+  - Target
+  - NonTarget
+  events:
+    non-target: 2
+    target: 1
+  feedback_type: visual
+  has_training_test_split: true
+  instructions: Copy spell seven predefined words of five characters each by focusing attention on desired letters
+  mode: online
+  n_classes: 2
+  paradigm: p300
+  primary_modality: visual
+  stimulus_modalities:
+  - visual
+  stimulus_type: row-column intensification
+  study_design: P300 speller with 6x6 matrix for copy-spelling task in ALS patients
+  synchronicity: synchronous
+file_format: Unknown
+paradigm_specific:
+  detected_paradigm: p300
+  isi_ms: 125.0
+  n_repetitions: 10
+  n_targets: 36
+  soa_ms: 250.0
+participants:
+  age_max: 72
+  age_mean: 58.0
+  age_min: 40
+  age_std: 12.0
+  bci_experience: naive
+  clinical_population: amyotrophic lateral sclerosis
+  gender:
+    F: 3
+    M: 5
+  health_status: ALS patients
+  n_subjects: 8
+  species: human
+performance:
+  accuracy_percent: 97.5
+  binary_accuracy_offline: 87.4
+  p300_amplitude_mean_uv: 3.3
+preprocessing:
+  artifact_methods:
+  - amplitude threshold rejection
+  bandpass:
+    high_cutoff_hz: 10.0
+    low_cutoff_hz: 0.1
+  data_state: preprocessed
+  epoch_window:
+  - 0.0
+  - 1.0
+  filter_order: 4
+  filter_type: Butterworth
+  highpass_hz: 0.1
+  lowpass_hz: 10.0
+  notch_hz:
+  - 50
+  notes: Epochs with peak amplitude >70 μV or <-70 μV were rejected. Baseline correction based on 200 ms preceding each epoch.
+  preprocessing_applied: true
+  preprocessing_steps:
+  - bandpass filtering
+  - notch filtering
+  - artifact rejection
+  - baseline correction
+  re_reference: right earlobe
+runs_per_session: 1
+sessions_per_subject: 1
+signal_processing:
+  classifiers:
+  - SWLDA
+  feature_extraction:
+  - temporal features
+  - decimation
+tags:
+  modality:
+  - P300
+  pathology:
+  - ALS
+  type:
+  - ERP

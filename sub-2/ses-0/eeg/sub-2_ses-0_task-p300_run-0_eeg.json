@@ -1,0 +1,48 @@
+{
+	"TaskName": "p300",
+	"Manufacturer": "g.MOBILAB",
+	"PowerLineFrequency": 50.0,
+	"SamplingFrequency": 256.0,
+	"SoftwareFilters": {
+		"preprocessing_steps": {
+			"Description": "bandpass filtering, notch filtering, artifact rejection, baseline correction"
+		}
+	},
+	"RecordingDuration": 1358.21484375,
+	"RecordingType": "continuous",
+	"EEGReference": "right earlobe",
+	"EEGGround": "left mastoid",
+	"EEGPlacementScheme": "10-10 system",
+	"EEGChannelCount": 8,
+	"EOGChannelCount": 0,
+	"ECGChannelCount": 0,
+	"EMGChannelCount": 0,
+	"TriggerChannelCount": 0,
+	"ManufacturersModelName": "g.MOBILAB",
+	"SoftwareVersions": "BCI2000",
+	"HardwareFilters": {
+		"Bandpass": {
+			"low_cutoff_hz": 0.1,
+			"high_cutoff_hz": 10.0,
+			"Type": "Butterworth",
+			"Order": 4
+		},
+		"Notch": {
+			"CutoffFrequency": [
+				50
+			]
+		}
+	},
+	"TaskDescription": "P300 speller with 6x6 matrix for copy-spelling task in ALS patients ISI: 125.0ms, SOA: 250.0ms.",
+	"Instructions": "Copy spell seven predefined words of five characters each by focusing attention on desired letters",
+	"CogAtlasID": "https://www.cognitiveatlas.org/task/id/tsk_GxjZBNiJorj1K/",
+	"InstitutionName": "Fondazione Santa Lucia",
+	"InstitutionAddress": "Via Ardeatina, 306, 00179 Rome, Italy",
+	"InstitutionalDepartmentName": "Neuroelectrical Imaging and BCI Laboratory",
+	"CapManufacturer": "n/a",
+	"CapManufacturersModelName": "n/a",
+	"SubjectArtefactDescription": "n/a",
+	"DeviceSerialNumber": "n/a",
+	"Description": "EEG recording.",
+	"MISCChannelCount": 0
+}
