@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "BNCI 2014-008 P300 dataset (ALS patients)",
-  "description": "This dataset comprises EEG recordings from 8 patients with amyotrophic lateral sclerosis (ALS) performing a P300-based brain-computer interface (BCI) speller task. Participants completed a copy-spelling paradigm using a 6×6 matrix with row-column intensification, generating 35 trials per subject across a single session. The preprocessed data, acquired at 256 Hz from 8 electrodes using active g.Ladybird sensors, demonstrates high classification accuracy (97.5%) and serves as a benchmark for evaluating BCI performance in clinical populations with severe motor impairment.",
-  "methods_description": "EEG data were acquired at 256 Hz sampling rate from 8 active electrodes (Fz, Cz, Pz, Oz, P3, P4, PO7, PO8) using g.MOBILAB hardware and BCI2000 software. Online filtering included 0.1-10 Hz bandpass and 50 Hz notch filters. Preprocessing involved offline bandpass filtering (0.1-10 Hz, 4th-order Butterworth), notch filtering at 50 Hz, artifact rejection (amplitude threshold ±70 μV), and baseline correction using 200 ms pre-stimulus intervals. Data were re-referenced to the right earlobe with ground at left mastoid.",
+  "description": "This dataset comprises EEG recordings from 8 patients with amyotrophic lateral sclerosis (ALS) performing a P300-based brain-computer interface (BCI) speller task. Participants completed a copy-spelling paradigm using a 6×6 matrix with row-column intensification, generating 35 trials per subject across a single session. The preprocessed data, acquired at 256 Hz from 8 scalp electrodes, demonstrates high classification accuracy (97.5%) and represents a clinically relevant application of P300-based communication systems for severely paralyzed individuals.",
+  "methods_description": "EEG data were acquired from 8 ALS patients using 8 active electrodes (Fz, Cz, Pz, Oz, P3, P4, PO7, PO8) in a 10-10 montage with g.MOBILAB hardware and BCI2000 software. Sampling rate was 256 Hz with online bandpass filtering (0.1-10 Hz) and 50 Hz notch filtering. Reference electrode was placed at the right earlobe with ground at left mastoid. Preprocessing included offline bandpass filtering (0.1-10 Hz, 4th-order Butterworth), notch filtering at 50 Hz, artifact rejection (amplitude threshold ±70 μV), and baseline correction using 200 ms pre-stimulus intervals. Participants performed a copy-spelling task with 7 words of 5 characters each using visual feedback in a synchronous, online mode.",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -20,6 +20,7 @@
     {
       "term": "Brain-Computer Interfaces",
       "subject_scheme": "MeSH",
+      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
       "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
     },
     {
@@ -31,19 +32,16 @@
       "term": "P300"
     },
     {
-      "term": "Event-Related Potentials, P300",
-      "subject_scheme": "MeSH",
-      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D018913"
-    },
-    {
       "term": "EEG"
     },
     {
-      "term": "attention"
+      "term": "event-related potential"
     },
     {
-      "term": "working memory"
+      "term": "communication assistive technology"
+    },
+    {
+      "term": "attention"
     }
   ],
   "related_identifiers": [
@@ -105,5 +103,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "35ef7ee344996cd8aeb33dcdac50fecc7d4efa7b5924a09f97cdf6b1da3202ef"
+  "source_hash": "8f37a65c1fdba6b773c1575e4c07be32276a13e357f0db35d2097f8f38192d46"
 }
