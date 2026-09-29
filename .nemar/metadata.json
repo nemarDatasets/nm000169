@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "BNCI 2014-008 P300 dataset (ALS patients)",
-  "description": "This dataset comprises EEG recordings from 8 patients with amyotrophic lateral sclerosis (ALS) performing a P300-based brain-computer interface (BCI) speller task. Participants completed a copy-spelling paradigm using a 6×6 matrix with row-column intensification, generating 35 trials per subject across a single session. The preprocessed data, acquired at 256 Hz from 8 scalp electrodes, demonstrates high classification accuracy (97.5%) and represents a clinically relevant application of P300-based communication systems for severely paralyzed individuals.",
-  "methods_description": "EEG data were acquired from 8 ALS patients using 8 active electrodes (Fz, Cz, Pz, Oz, P3, P4, PO7, PO8) in a 10-10 montage with g.MOBILAB hardware and BCI2000 software. Sampling rate was 256 Hz with online bandpass filtering (0.1-10 Hz) and 50 Hz notch filtering. Reference electrode was placed at the right earlobe with ground at left mastoid. Preprocessing included offline bandpass filtering (0.1-10 Hz, 4th-order Butterworth), notch filtering at 50 Hz, artifact rejection (amplitude threshold ±70 μV), and baseline correction using 200 ms pre-stimulus intervals. Participants performed a copy-spelling task with 7 words of 5 characters each using visual feedback in a synchronous, online mode.",
+  "description": "EEG recordings from eight people with amyotrophic lateral sclerosis (ALS) performing a P300-based brain-computer interface speller task. Participants copy-spelled seven predefined five-character words on a 6x6 matrix using row-column intensification. The dataset was collected to study how attention and working memory relate to P300-BCI performance in ALS. It provides preprocessed epochs with target and non-target events.",
+  "methods_description": "Eight EEG channels (Fz, Cz, Pz, Oz, P3, P4, PO7, PO8) were recorded at 256 Hz with a g.MOBILAB amplifier and active g.Ladybird Ag/AgCl electrodes, using BCI2000. The reference was the right earlobe and the ground the left mastoid. Online filtering was 0.1-10 Hz bandpass plus a 50 Hz notch. Stimulus onset asynchrony was 250 ms. Epochs of 0-1 s were baseline-corrected, and epochs exceeding ±70 μV were rejected. Classification used stepwise linear discriminant analysis (SWLDA).",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -18,10 +18,13 @@
   },
   "keywords": [
     {
-      "term": "Brain-Computer Interfaces",
-      "subject_scheme": "MeSH",
-      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+      "term": "EEG"
+    },
+    {
+      "term": "P300"
+    },
+    {
+      "term": "brain-computer interface"
     },
     {
       "term": "Amyotrophic Lateral Sclerosis",
@@ -29,19 +32,15 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D000690"
     },
     {
-      "term": "P300"
+      "term": "Attention",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D001288"
     },
     {
-      "term": "EEG"
+      "term": "working memory"
     },
     {
-      "term": "event-related potential"
-    },
-    {
-      "term": "communication assistive technology"
-    },
-    {
-      "term": "attention"
+      "term": "event-related potentials"
     }
   ],
   "related_identifiers": [
@@ -76,7 +75,7 @@
       "funder_name": "Italian Agency for Research on ALS-ARiSLA project 'Brindisys'"
     },
     {
-      "funder_name": "Italian Agency for Research on ALS",
+      "funder_name": "Italian Agency for Research on ALS (ARiSLA)",
       "award_title": "Brindisys"
     },
     {
@@ -91,7 +90,7 @@
     "eeg"
   ],
   "sizes": [
-    "251.1 MB (20 files)"
+    "239 MB (20 files)"
   ],
   "formats": [
     ".bdf",
